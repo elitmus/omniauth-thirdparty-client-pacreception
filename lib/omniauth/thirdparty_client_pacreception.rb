@@ -1,0 +1,2 @@
+require 'omniauth/thirdparty_client_pacreception/version'
+require 'omniauth/strategies/thirdparty_client_pacreception'

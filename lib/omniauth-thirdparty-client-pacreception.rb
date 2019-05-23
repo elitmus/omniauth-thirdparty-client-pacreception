@@ -1,0 +1,1 @@
+require 'omniauth/thirdparty_client_pacreception'
