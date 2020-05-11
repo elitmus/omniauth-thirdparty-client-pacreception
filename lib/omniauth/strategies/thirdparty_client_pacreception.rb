@@ -27,7 +27,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info || access_token.get(api_path).parsed
+        @raw_info ||= access_token.get(api_path).parsed
       end
 
       def authorize_params
@@ -43,6 +43,10 @@ module OmniAuth
 
       def callback_path
         options[:callback_path] || super
+      end
+
+      def callback_url
+        full_host + script_name + callback_path
       end
 
       def prune!(hash)
